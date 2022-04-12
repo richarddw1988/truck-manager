@@ -27,6 +27,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove=".gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Application\TruckManager.Application.csproj" />
     <ProjectReference Include="..\Infrastructure\TruckManager.Infrastructure.csproj" />
   </ItemGroup>
