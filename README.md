@@ -36,7 +36,7 @@ Ou então você pode baixar o Node direto do site Node https://nodejs.org/dist/v
  
 ### Execução: 
 1. Executar o arquivo TruckManager.sln na pasta truck-manager
-2. Colocar o TruckManager.Prestantion como projeto de inicialização
+2. Colocar o TruckManager.Presentation como projeto de inicialização
 3. Apertar F5, após isso irá abrir 2 prompts de comando, aguarde...
 4. A página vai abrir direto na tela de cadastro
 
