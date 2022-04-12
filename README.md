@@ -8,7 +8,7 @@
 ### Banco de dados 
 Para instalar o LocalDb -> https://docs.microsoft.com/pt-br/sql/database-engine/configure-windows/sql-server-express-localdb?view=sql-server-ver15
 
-1. Comando para verificar a instância do LocalDb instalado na máquina que pode ser executado no powersheel/cmd após a instalação:
+1. Comando para verificar a instância do LocalDb instalado na máquina que pode ser executado no powershell/cmd após a instalação:
 
 SqlLocalDB info
 
