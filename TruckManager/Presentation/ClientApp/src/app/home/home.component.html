@@ -1,0 +1,62 @@
+<div class="container">
+  <h1 id="tableLabel">Truck Manager</h1>
+
+  <form>
+    <div class="row mb-3">
+      <div class="col">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="truck.nome" />
+      </div>
+      <div class="col">
+        <label for="modelo" class="form-label">Modelo</label>
+        <select class="form-control" [(ngModel)]="truck.idModelo" id="modelo" name="modelo">
+          <option value="0">--Selecione--</option>
+          <option *ngFor="let modelo of modelos" value={{modelo.id}}> {{modelo.nome}} </option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="anoFabricacao" class="form-label">Ano Fabricação</label>
+        <input type="number" class="form-control" id="anoFabricacao" name="anoFabricacao" min="2022" [(ngModel)]="truck.anoFabricacao" />
+      </div>
+      <div class="col">
+        <label for="anoModelo" class="form-label">Ano Modelo</label>
+        <input type="number" class="form-control" id="anoModelo" name="anoModelo" min="2022" [(ngModel)]="truck.anoModelo" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-auto">
+        <button type="button" class="btn btn-primary" (click)="onClickIncluir()">Incluir</button>
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn btn-primary" (click)="onClickAtualizar()">Atualizar</button>
+      </div>
+      <div class="col-auto">
+        <button type="button" class="btn btn-primary" (click)="onClickExcluir()">Excluir</button>
+      </div>
+    </div>
+  </form>
+
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="trucks">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Nome</th>
+        <th>Modelo</th>
+        <th>Ano Fabricação</th>
+        <th>Ano Modelo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let truck of trucks">
+        <td>
+          <input class="form-check-input" type="checkbox" id="checkbox-{{truck.id}}" [(ngModel)]="truck.selecionado" (change)="onChangeCheckbox($event, truck.id)" />
+        </td>
+        <td>{{ truck.nome }}</td>
+        <td>{{ truck.modelo }}</td>
+        <td>{{ truck.anoFabricacao }}</td>
+        <td>{{ truck.anoModelo }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
